@@ -1,0 +1,30 @@
+#aml-cml-wrapper {
+  height: 35vh;
+  display: flex;
+}
+
+#contact-me-wrapper {
+  border-left: 1px solid grey;
+}
+
+.link-box {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  background-color: #fed8b1;
+}
+
+.link-box div {
+  margin-top: 70px;
+  margin-left: 30%;
+}
+
+.link-box span {
+  font-size: 35px;
+}
+
+.link-box p {
+  padding-left: 10px;
+  padding-bottom: 5px;
+}

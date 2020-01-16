@@ -1,0 +1,52 @@
+#case-studies-wrapper {
+  width: inherit;
+  height: 48vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 45px;
+  background-color: #ffffed;
+}
+
+#case-studies-wrapper > div {
+  display: flex;
+  justify-content: center;
+}
+
+#case-studies-wrapper > div > p {
+  /* header syles only */
+  font-size: 28px;
+  margin-top: 28px;
+  margin-bottom: 14px;
+}
+
+#case-studies-wrapper section {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+#case-studies-wrapper ul {
+  height: inherit;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  overflow: auto;
+}
+
+#case-studies-wrapper ul li {
+  position: relative;
+  height: 74%;
+  padding-left: 290px;
+  /* this is actually width because I am using aspect ratio */
+  /* making this relative makes the squares get slimmer as the screen gets wider */
+  margin: 20px;
+  background-color: #ffcccb;
+}
+
+.quickshow-wrapper p {
+  position: absolute;
+  right: 50%;
+  /* this is the alignment of text inside the quickshow */
+}

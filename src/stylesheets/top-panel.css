@@ -1,0 +1,29 @@
+#top-panel-wrapper {
+  width: 100%;
+  height: 55vh;
+  background-color: #add8e6;
+}
+
+#top-panel-wrapper section {
+  margin-left: 8%;
+  padding-top: 120px;
+  width: 350px;
+  /* this needs to be a pixel amount, otherwise the text will squish */
+}
+
+#top-panel-wrapper header {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+#top-panel-wrapper main {
+  font-size: 28px;
+}
+
+#top-panel-wrapper p {
+  font-size: 20px;
+}
+
+.tpt {
+  padding-bottom: 10px;
+}
