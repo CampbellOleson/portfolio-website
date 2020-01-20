@@ -10,16 +10,16 @@ const CaseStudies = () => {
       </div>
       <section>
         <ul>
-          <li>
+          <li className="quickshow-item">
             <CaseStudyQuickshow />
           </li>
-          <li>
+          <li className="quickshow-item">
             <CaseStudyQuickshow />
           </li>
-          <li>
+          <li className="quickshow-item">
             <CaseStudyQuickshow />
           </li>
-          <li>
+          <li className="quickshow-item">
             <CaseStudyQuickshow />
           </li>
         </ul>

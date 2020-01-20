@@ -1,6 +1,7 @@
 #case-studies-wrapper {
   width: inherit;
   height: 48vh;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   padding-bottom: 45px;
@@ -29,13 +30,14 @@
 #case-studies-wrapper ul {
   height: inherit;
   width: 90%;
+  min-height: 250px;
   display: flex;
   justify-content: space-around;
   list-style: none;
   overflow: auto;
 }
 
-#case-studies-wrapper ul li {
+.quickshow-item {
   position: relative;
   height: 74%;
   padding-left: 290px;
@@ -43,6 +45,12 @@
   /* making this relative makes the squares get slimmer as the screen gets wider */
   margin: 20px;
   background-color: #ffcccb;
+  border-radius: 4px;
+}
+
+.quickshow-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 .quickshow-wrapper p {
