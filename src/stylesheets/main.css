@@ -4,10 +4,6 @@
   display: flex;
 }
 
-/* #contact-me-wrapper { */
-  /* border-left: 1px solid grey; */
-/* } */
-
 .link-box {
   width: 50%;
   height: inherit;
@@ -16,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: #98fb98;
+  transition: all 0.2s ease-in-out;
 }
 
 .link-box span {
@@ -31,5 +28,18 @@
 
 .link-box:hover {
   transform: scale(1.05);
-  transition: transform 0.2s ease;
+}
+
+@media all and (min-width: 100px) and (max-width: 450px) {
+  .link-box span {
+    font-size: 22px;
+  }
+
+  .link-box p {
+    font-size: 11px;
+  }
+
+  #aml-cml-wrapper {
+    height: 25vh;
+  }
 }

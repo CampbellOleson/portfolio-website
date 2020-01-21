@@ -14,6 +14,11 @@ const TopPanel = () => {
           legendos at vix ad putent
         </p>
       </section>
+      {/* <div id="profile-photo-hor-wrapper">
+        <div id="profile-photo-vert-wrapper">
+          <div id="profile-photo" />
+        </div>
+      </div> */}
     </div>
   );
 };

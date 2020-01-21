@@ -46,15 +46,56 @@
   margin: 20px;
   background-color: #ffcccb;
   border-radius: 4px;
+  transition: all 0.2s ease-in-out;
 }
 
 .quickshow-item:hover {
   transform: scale(1.05);
-  transition: transform 0.2s ease;
 }
 
 .quickshow-wrapper p {
   position: absolute;
   right: 50%;
   /* this is the alignment of text inside the quickshow */
+}
+
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #case-studies-wrapper {
+    width: inherit;
+    height: 32vh;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    background-color: #ffffed;
+  }
+
+  #case-studies-wrapper > div > p {
+    /* header syles only */
+    font-size: 22px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+  }
+
+  #case-studies-wrapper ul {
+    height: inherit;
+    width: 90%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    overflow: auto;
+  }
+
+  .quickshow-item {
+    position: relative;
+    height: 74%;
+    padding-left: 190px;
+    /* this is actually width because I am using aspect ratio */
+    /* making this relative makes the squares get slimmer as the screen gets wider */
+    margin: 10px;
+    background-color: #ffcccb;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
 }

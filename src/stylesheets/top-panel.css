@@ -3,13 +3,16 @@
   height: 55vh;
   min-height: 350px;
   background-color: #add8e6;
+  display: flex;
+  position: relative;
 }
 
 #top-panel-wrapper section {
   margin-left: 8%;
   padding-top: 120px;
   width: 350px;
-  /* this needs to be a pixel amount, otherwise the text will squish */
+  min-width: 350px;
+  color: white;
 }
 
 #top-panel-wrapper header {
@@ -25,6 +28,58 @@
   font-size: 20px;
 }
 
+#profile-photo {
+  background-image: url("../assets/campbell.png");
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+
+#profile-photo-vert-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#profile-photo-hor-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 400px;
+}
+
 .tpt {
   padding-bottom: 10px;
+}
+
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #top-panel-wrapper {
+    width: 100%;
+    height: 35vh;
+    min-height: 250px;
+    background-color: #add8e6;
+  }
+
+  #top-panel-wrapper section {
+    margin-left: 8%;
+    padding-top: 50px;
+    width: 200px;
+    min-width: 180px;
+  }
+
+  #top-panel-wrapper header {
+    font-weight: bolder;
+    font-size: 30px;
+  }
+
+  #top-panel-wrapper main {
+    font-size: 20px;
+  }
+
+  #top-panel-wrapper p {
+    font-size: 11px;
+  }
+
+  #profile-photo {
+    display: none;
+  }
 }
