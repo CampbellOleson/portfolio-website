@@ -1,6 +1,7 @@
 import React from "react";
-import Resume from "../assets/Resume.pdf";
-import "../stylesheets/nav.css";
+import Resume from "../../assets/Resume.pdf";
+import { Link } from "react-router-dom";
+import "../../stylesheets/nav.css";
 
 class Nav extends React.Component {
   constructor(props) {
@@ -18,12 +19,26 @@ class Nav extends React.Component {
         <div id="nav-modal" className="modal">
           <div>
             <ul>
-              <li className="nav-link">Home</li>
-              <li className="nav-link">About</li>
               <li className="nav-link">
-                <a href={Resume}>Resume</a>
+                <Link to="/" onClick={this.toggleModal}>
+                  Home
+                </Link>
               </li>
-              <li className="nav-link">Contact</li>
+              <li className="nav-link">
+                <Link to="/about" onClick={this.toggleModal}>
+                  About
+                </Link>
+              </li>
+              <li className="nav-link">
+                <a href={Resume} onClick={this.toggleModal}>
+                  Resume
+                </a>
+              </li>
+              <li className="nav-link">
+                <Link to="/contact" onClick={this.toggleModal}>
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

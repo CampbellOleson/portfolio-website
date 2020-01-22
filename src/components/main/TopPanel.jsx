@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/top-panel.css";
+import "../../stylesheets/top-panel.css";
 
 const TopPanel = () => {
   return (

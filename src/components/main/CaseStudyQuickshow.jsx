@@ -1,19 +1,10 @@
 import React from "react";
 
 class CaseStudyQuickshow extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      desc: "",
-      photoURL: ""
-    };
-  }
-
   render() {
     return (
       <div className="quickshow-wrapper">
-        <p>Example Case Study</p>
+        <p>{this.props.name} Case Study</p>
       </div>
     );
   }

@@ -11,8 +11,8 @@
 .floating-name {
   position: fixed;
   z-index: 3;
-  top: 30px;
-  left: 30px;
+  top: 25px;
+  left: 20px;
   font-size: 20px;
   font-weight: bold;
   color: white;
