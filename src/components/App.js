@@ -7,6 +7,7 @@ import AmpCamp from "./case-studies/AmpCamp";
 import Canopy from "./case-studies/Canopy";
 import Fishhook from "./case-studies/Fishhook";
 import RipCamp from "./case-studies/RipCamp";
+import Footer from "./main/Footer";
 import "../stylesheets/main.css";
 import "../stylesheets/reset.css";
 import { HashRouter, Route, Switch } from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/case-studies/fishhook" component={Fishhook} />
         <Route exact path="/case-studies/ripcamp" component={RipCamp} />
       </Switch>
+      <Footer />
     </HashRouter>
   );
 }

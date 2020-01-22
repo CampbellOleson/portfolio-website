@@ -3,7 +3,6 @@ import TopPanel from "./TopPanel";
 import CaseStudies from "./CaseStudies";
 import AboutMeLink from "./AboutMeLink";
 import ContactMeLink from "./ContactMeLink";
-import Footer from "./Footer";
 import "../../stylesheets/main.css";
 
 const MainPage = () => (
@@ -14,7 +13,6 @@ const MainPage = () => (
       <AboutMeLink />
       <ContactMeLink />
     </div>
-    <Footer />
   </div>
 );
 

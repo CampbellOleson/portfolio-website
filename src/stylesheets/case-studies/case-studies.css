@@ -1,0 +1,100 @@
+.cs-nav {
+  position: fixed;
+  height: 90px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+.cs-topper {
+  width: inherit;
+  height: 500px;
+  padding-top: 90px;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cs-topper-info {
+  width: 450px;
+}
+
+.cs-topper-info > div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-top: 15px;
+  border-top: 1px solid gray;
+}
+
+.cs-topper-info > header {
+  font-size: 50px;
+}
+
+.cs-topper-info > summary {
+  font-size: 20px;
+  line-height: 1.4;
+  padding-top: 25px;
+}
+
+.vert-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hor-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cs-container {
+  width: inherit;
+  background-color: whitesmoke;
+}
+
+.cs-img {
+  width: 70vw;
+}
+
+.cs-img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cs-img-padding {
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.cs-textblock {
+  width: 50vw;
+  margin-bottom: 40px;
+}
+
+.cs-textblock > header {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.cs-textblock > article {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.cs-img-small {
+  width: 470px;
+}
+
+.cs-img-small-wrapper {
+  width: 70vw;
+  min-width: 950px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 70px;
+  padding-top: 20px;
+}
