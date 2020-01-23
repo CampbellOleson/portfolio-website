@@ -1,9 +1,38 @@
 #catch-img {
   width: 500px;
   height: 300px;
+  margin-left: 10px;
   background-image: url("../../assets/screenshots/fishhook/catch.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+@media all and (min-width: 980px) and (max-width: 1100px) {
+  #catch-img {
+    width: 420px;
+    height: 250px;
+  }
+}
+
+@media all and (min-width: 690px) and (max-width: 980px) {
+  #catch-img {
+    width: 330px;
+    height: 200px;
+    margin-left: 5px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 750px) {
+  #catch-img {
+    width: 280px;
+    height: 162px;
+    margin-left: 5px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 690px) {
+  #catch-img {
+    display: none;
+  }
+}
