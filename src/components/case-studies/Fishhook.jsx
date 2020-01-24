@@ -44,13 +44,13 @@ const Fishhook = () => {
         <div className="cs-textblock">
           <header>Assignment</header>
           <article>
-            During the later portion of my full-stack web development course
-            with App Academy, I was tasked with single-handedly creating a
-            full-stack web application, the purpose of which was my choosing.
-            Considering the prevalence of fishing-themed Facebook groups, and
-            the fact that I myself am an avid fly-fisher, I decided to create a
-            social media platform specifically for people who love to fish (and
-            talk about it).
+            During the later portion of my software development course with App
+            Academy, I was tasked with creating a full-stack web application.
+            The purpose and implementation details of the website were up to me
+            to figure out. I noticed an abundance of fishing-themed Facebook
+            groups, and I myself am an avid fly-fisher, so for my project I
+            decided to create a social media platform specifically designed for
+            people who love to fish (and post about it online).
           </article>
         </div>
       </div>
@@ -59,20 +59,22 @@ const Fishhook = () => {
         <div className="cs-textblock">
           <header>Planning</header>
           <article>
-            First and foremost, Fishhook had to provide a way for users to find
-            and connect with one another. Secondly, users needed to be able to
-            personalize their account and post content for their Fishhook
-            friends to see. Lastly, I planned to add functionality that would
-            allow users to share fishing spots with their friends leveraging
-            Google Maps API.
+            When I set out to design and architect Fishhook, I began by
+            determining the core functionality that it would need to include.
+            Fishhook would have to provide a way for users to find and connect
+            with one another. Furthermore, Fishhook users would need to be able
+            to personalize their account and post content for their friends to
+            see. It sounded simple in the early stages, but as I delved further
+            into it, I determined that my app would need user entities with
+            associated post entities, a friend requests system, a search
+            component, profile page components, feed components, and much more.
           </article>
-
           <article>
-            Before I started developing Fishhook, I sat down and sketched out
-            the backend architecture of my app, as well as all the frontend
-            views that it would include. I didn’t have much time for this
-            project, so after my pen-and-paper wireframes were complete, I began
-            developing.
+            Before I started writing any code, I sketched out the backend
+            architecture of my app, as well as all the frontend views that it
+            would include. App Academy gave me a stringent time limit for the
+            completion of this assignment, so after my pen-and-paper wireframes
+            were complete, I began developing.
           </article>
         </div>
       </div>
@@ -82,23 +84,23 @@ const Fishhook = () => {
           <header>Features and Functionality</header>
           <article>
             I implemented Fishhook using Ruby on Rails for the backend and
-            PostgreSQL for the database. This way, I could leverage Rails’s
-            convention-over-configuration philosophy for quick development, and
-            SQL to manage relationships between different entities in my
-            database, such as users, friend requests, and posts. I used Postman
-            to test my backend API before moving on.
+            PostgreSQL for the database. I chose this stack so I could leverage
+            Rails’s convention-over-configuration philosophy for quick
+            development and SQL to manage relationships between different
+            entities in my database. I then tested my backend API using Postman
+            before moving on.
           </article>
           <article>
-            On the frontend, I leveraged Redux to manage application state, and
+            On the frontend, I used Redux to manage application state and
             ReactJS to create a responsive user interface. I employed AJAX to
             send asynchronous requests to my backend API.
           </article>
-          <article>
-            Users of Fishhook can search other users and friend-request them. If
-            you want to friend-request a user, you can do so by navigating to
-            their profile page and clicking the “Add Friend” button. Incoming
-            friend requests can be viewed in a dropdown modal. You can accept an
-            incoming friend request, or delete it.
+          <article className="cs-bmo">
+            Users of Fishhook can search for other users and friend-request
+            them. To friend-request a user, navigate to their profile page and
+            clicking the “Add Friend” button. Incoming friend requests are found
+            in a dropdown modal attached to the top nav. Users can accept
+            incoming friend requests, or delete them.
           </article>
         </div>
       </div>
@@ -117,17 +119,17 @@ const Fishhook = () => {
       <div className="hor-center">
         <div className="cs-textblock cs-bmo">
           <article className="cs-bmo">
-            Once you’ve befriended a user, you can see their posts in the “Feed”
-            component of the app. You can also navigate to a user’s profile page
-            and see all the content that they have posted. Similarly, you can
-            view a user’s friends on their profile page by clicking on the
-            “Friends” tab.
+            Once you’ve befriended a user, their posts can be found in the
+            “Feed” component of the app. Navigate to a user’s profile page to
+            see all the content that they have posted. Similarly, to see a
+            user’s friends, navigate to their profile page and click on the
+            “friends” tab.
           </article>
         </div>
       </div>
 
       <div className="hor-center">
-        <div className="cs-img-small-wrapper cs-img-margin">
+        <div className="cs-img-small-wrapper cs-img-margin cs-bmo">
           <img
             src={UserFeed}
             alt="User Feed Screenshot"
@@ -141,7 +143,7 @@ const Fishhook = () => {
         </div>
       </div>
 
-      <div className="cs-img-wrapper cs-img-margin" >
+      <div className="cs-img-wrapper cs-img-margin">
         <img src={Feed} alt="Feed Screenshot" className="cs-img" />
       </div>
 
@@ -150,18 +152,18 @@ const Fishhook = () => {
           <header>Challenges</header>
           <article>
             Developing Fishhook presented me with a variety of challenges as a
-            new developer. The first problem I ran into was how to create
-            “friend-requests” between users, that, when accepted, would
-            associate the users and allow them to see each other's content.
+            new programmer. The first challenge I came across was how to create
+            “friend-requests” between users that would associate the users as
+            “friends” when accepted and allow them to see each other's posts.
           </article>
           <article className="cs-bmo">
-            I got around this by creating a “requests” joins table using Ruby on
-            Rails ORM. The table had columns for the “requester_id”, the
+            I overcame this by creating a “requests” joins table using Ruby on
+            Rails ORM. The table has columns for the “requester_id”, the
             “requested_id”, and a boolean status field indicating whether or not
-            the request had been accepted. Users create entries in this table
-            when they issue a friend request. Once the receiving user accepts
-            the request, the status field is updated, and the entry becomes an
-            association between the users.
+            the request had been accepted. The friendships controller creates an
+            entry in this table whenever a user sends a friend request. Once the
+            receiving user accepts the request, the status field is updated, and
+            the entry becomes a “friends” association between the users.
           </article>
         </div>
       </div>
@@ -176,17 +178,17 @@ const Fishhook = () => {
       <div className="hor-center">
         <div className="cs-textblock">
           <article>
-            I also ran into difficult bugs in this project, the most frustrating
-            of which was an error in one of my Redux reducers. I had a
-            JavaScript Object storing arrays. When I tried to copy this object
+            I ran into a few difficult bugs in this project, the most
+            frustrating of which was an error in one of my Redux reducers. I had
+            a JavaScript Object storing arrays. When I tried to copy this object
             into the updated application state, I used Object.assign(), which
             created a shallow copy, and preserved the object ids of the arrays
             inside.
           </article>
           <article>
             I spent hours searching for the cause of the unexpected behavior
-            that ensued. Finally, when logging my application state changes with
-            Chrome DevTools, I noticed that the contents of the arrays from
+            that followed. Finally, when logging my application state changes
+            with Chrome DevTools, I noticed that the contents of the arrays from
             previous state changes retroactively updated with each new state
             change. The “old arrays” would update to have the same contents as
             the “new arrays”. This pointed me towards the source of the problem,
@@ -197,21 +199,20 @@ const Fishhook = () => {
 
       <div className="hor-center">
         <div className="cs-textblock">
-          <header>Conclusion</header>
+          <header>Outcome</header>
           <article>
             Fishhook was my first full-stack project at App Academy, and my
             first real venture into software development. It’s important to note
             that this project served as an educational experience for me. Not
-            everything about the app is production quality, and there are still
-            plenty of aspects for me to improve upon.
+            every aspect of this app is production quality, and there are still
+            plenty of features for me to improve upon.
           </article>
           <article>
             I plan to continue to work on Fishhook to improve the user
             interface, make the layout more responsive to different device
-            sizes, and add the rest of the functionality that I included in the
-            blueprints. All things considered, Fishhook turned out to be an
-            excellent learning experience, and gave me a strong sense of the
-            fundamentals of web development.
+            sizes, and add some more functionality. All things considered,
+            Fishhook turned out to be an excellent learning experience, and gave
+            me a strong sense of the fundamentals of web development.
           </article>
         </div>
       </div>

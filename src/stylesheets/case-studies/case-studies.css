@@ -85,6 +85,13 @@
   box-shadow: 1px 2px 5px 2px rgba(192, 192, 192, 1);
 }
 
+.cs-img-medium {
+  width: 50vw;
+  -webkit-box-shadow: 1px 2px 5px 2px rgba(192, 192, 192, 1);
+  -moz-box-shadow: 1px 2px 5px 2px rgba(192, 192, 192, 1);
+  box-shadow: 1px 2px 5px 2px rgba(192, 192, 192, 1);
+}
+
 .cs-img-small {
   width: 470px;
   -webkit-box-shadow: 1px 2px 5px 2px rgba(192, 192, 192, 1);
@@ -160,6 +167,10 @@
     width: 60vw;
   }
 
+  .cs-img-medium {
+    width: 60vw;
+  }
+
   .cs-img {
     width: 80vw;
   }
@@ -179,6 +190,10 @@
   }
 
   .cs-img-small {
+    width: 90vw;
+  }
+
+  .cs-img-medium {
     width: 90vw;
   }
 
@@ -273,6 +288,10 @@
   .cs-textblock {
     width: 90vw;
     margin-bottom: 15px;
+  }
+
+  .cs-img-medium {
+    width: 90vw;
   }
 
   .cs-textblock > header {
