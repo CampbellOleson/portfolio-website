@@ -42,7 +42,13 @@ class Nav extends React.Component {
             </ul>
           </div>
         </div>
-        <p className="floating-name">Campbell Oleson</p>
+
+        <Link to="/">
+          <p className="floating-name">Campbell Oleson</p>
+        </Link>
+        <Link to="/">
+          <p className="floating-initials">C.O.</p>
+        </Link>
       </div>
     );
   }

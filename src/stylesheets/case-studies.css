@@ -1,10 +1,8 @@
 #case-studies-wrapper {
   width: inherit;
-  height: 48vh;
-  min-height: 260px;
+  height: 450px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 45px;
   background-color: #ffffed;
 }
 
@@ -14,7 +12,6 @@
 }
 
 #case-studies-wrapper > div > p {
-  /* header syles only */
   font-size: 28px;
   margin-top: 28px;
   margin-bottom: 14px;
@@ -25,77 +22,49 @@
   height: inherit;
   display: flex;
   justify-content: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 #case-studies-wrapper ul {
   height: inherit;
-  width: 90%;
-  min-height: 250px;
   display: flex;
-  justify-content: space-around;
   list-style: none;
   overflow: auto;
 }
 
-.quickshow-item {
-  position: relative;
-  height: 74%;
-  padding-left: 290px;
-  /* this is actually width because I am using aspect ratio */
-  /* making this relative makes the squares get slimmer as the screen gets wider */
-  margin: 20px;
-  background-color: #ffcccb;
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out;
-}
-
-.quickshow-item:hover {
-  transform: scale(1.05);
-}
-
-.quickshow-wrapper p {
-  position: absolute;
-  right: 50%;
-  /* this is the alignment of text inside the quickshow */
-}
-
-@media all and (min-width: 100px) and (max-width: 450px) {
+@media all and (min-width: 750px) and (max-width: 900px) {
   #case-studies-wrapper {
-    width: inherit;
-    height: 32vh;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 10px;
-    background-color: #ffffed;
+    height: 390px;
   }
 
   #case-studies-wrapper > div > p {
-    /* header syles only */
-    font-size: 22px;
+    font-size: 25px;
     margin-top: 18px;
     margin-bottom: 5px;
   }
+}
 
-  #case-studies-wrapper ul {
-    height: inherit;
-    width: 90%;
-    min-height: 200px;
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    overflow: auto;
+@media all and (min-width: 500px) and (max-width: 750px) {
+  #case-studies-wrapper {
+    height: 330px;
   }
 
-  .quickshow-item {
-    position: relative;
-    height: 74%;
-    padding-left: 190px;
-    /* this is actually width because I am using aspect ratio */
-    /* making this relative makes the squares get slimmer as the screen gets wider */
-    margin: 10px;
-    background-color: #ffcccb;
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out;
+  #case-studies-wrapper > div > p {
+    font-size: 22px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 500px) {
+  #case-studies-wrapper {
+    height: 300px;
+  }
+
+  #case-studies-wrapper > div > p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 }

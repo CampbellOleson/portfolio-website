@@ -1,7 +1,7 @@
 import React from "react";
 import CaseStudyQuickshow from "./CaseStudyQuickshow";
-import { Link } from "react-router-dom";
 import "../../stylesheets/case-studies.css";
+import "../../stylesheets/quickshow.css";
 
 const CaseStudies = () => {
   return (
@@ -11,26 +11,38 @@ const CaseStudies = () => {
       </div>
       <section>
         <ul>
-          <Link to="/case-studies/canopy">
-            <li className="quickshow-item">
-              <CaseStudyQuickshow name={"Canopy"} />
-            </li>
-          </Link>
-          <Link to="/case-studies/fishhook">
-            <li className="quickshow-item">
-              <CaseStudyQuickshow name="Fishhook" />
-            </li>
-          </Link>
-          <Link to="/case-studies/ampcamp">
-            <li className="quickshow-item">
-              <CaseStudyQuickshow name="AmpCamp" />
-            </li>
-          </Link>
-          <Link to="/case-studies/ripcamp">
-            <li className="quickshow-item">
-              <CaseStudyQuickshow name="RipCamp" />
-            </li>
-          </Link>
+          <li>
+            <CaseStudyQuickshow
+              name="RipCamp"
+              desc="Full-stack, Responsive UI"
+              url="ripcamp"
+              bg="rc-bg"
+            />
+          </li>
+          <li>
+            <CaseStudyQuickshow
+              name="Tax Prep"
+              desc="Canopy, Inc. QA"
+              url="tax-prep"
+              bg="ct-bg"
+            />
+          </li>
+          <li>
+            <CaseStudyQuickshow
+              name="Fishhook"
+              desc="Full-stack, Relational DB"
+              url="fishhook"
+              bg="fh-bg"
+            />
+          </li>
+          <li>
+            <CaseStudyQuickshow
+              name="AmpCamp"
+              desc="Full-stack, AWS S3"
+              url="ampcamp"
+              bg="ac-bg"
+            />
+          </li>
         </ul>
       </section>
     </div>

@@ -13,6 +13,7 @@
   justify-content: center;
   background-color: #98fb98;
   transition: all 0.2s ease-in-out;
+  border: 1px solid #008b8b;
 }
 
 .link-box span {

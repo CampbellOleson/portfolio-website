@@ -20,6 +20,11 @@ const Fishhook = () => {
             <header>Fishhook</header>
             <div>
               <p>Campbell Oleson</p>
+              <div className="cs-links">
+                <a href="https://fish-hook.herokuapp.com/#/">Live</a>
+                <p>|</p>
+                <a href="https://github.com/CampbellOleson/fishhook">GitHub</a>
+              </div>
               <p>July 2019</p>
             </div>
             <summary>

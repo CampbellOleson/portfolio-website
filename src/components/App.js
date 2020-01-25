@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/case-studies/ampcamp" component={AmpCamp} />
-        <Route exact path="/case-studies/canopy" component={Canopy} />
+        <Route exact path="/case-studies/tax-prep" component={Canopy} />
         <Route exact path="/case-studies/fishhook" component={Fishhook} />
         <Route exact path="/case-studies/ripcamp" component={RipCamp} />
       </Switch>

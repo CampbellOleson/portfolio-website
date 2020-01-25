@@ -4,7 +4,24 @@
   width: 100vw;
   top: 0;
   left: 0;
+  z-index: 2;
   background-color: black;
+}
+
+.cs-links {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.cs-links > a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.cs-links > a:hover {
+  font-weight: bold;
 }
 
 .cs-wrapper {
@@ -20,6 +37,7 @@
 
 .cs-topper {
   width: inherit;
+  position: relative;
   height: 500px;
   padding-top: 80px;
   padding-left: 15vw;
@@ -182,6 +200,14 @@
   .cs-topper-info > div {
     font-size: 15px;
   }
+
+  .cs-links {
+    width: 25%;
+  }
+
+  .cs-links > a {
+    font-size: 15px;
+  }
 }
 
 @media all and (min-width: 100px) and (max-width: 980px) {
@@ -210,6 +236,10 @@
   }
 
   .cs-topper-info > div {
+    font-size: 12px;
+  }
+
+  .cs-links > a {
     font-size: 12px;
   }
 }
@@ -263,6 +293,10 @@
 
   .cs-tpf {
     padding-top: 50px !important;
+  }
+
+  .cs-links {
+    width: 25%;
   }
 }
 
@@ -320,5 +354,9 @@
 
   .cs-tpf {
     padding-top: 30px !important;
+  }
+
+  .cs-links {
+    width: 30%;
   }
 }

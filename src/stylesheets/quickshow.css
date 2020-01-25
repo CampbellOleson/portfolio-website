@@ -1,0 +1,109 @@
+.quickshow-item {
+  position: relative;
+  text-decoration: none;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #ffcccb;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: -1px 3px 9px 0px rgba(128, 128, 128, 1);
+  -moz-box-shadow: -1px 3px 9px 0px rgba(128, 128, 128, 1);
+  box-shadow: -1px 3px 9px 0px rgba(128, 128, 128, 1);
+}
+
+.qs-info {
+  background-color: whitesmoke;
+  border-radius: 0 0 4px 4px;
+  height: 70px;
+}
+
+.qs-info > div {
+  margin-left: 10%;
+}
+
+.quickshow-item:hover {
+  transform: scale(1.04);
+}
+
+.qs-info p {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+}
+
+.qs-info span {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 1%;
+  font-size: 12px;
+  color: black;
+}
+
+.rc-bg {
+  background-image: url("../assets/screenshots/ripcamp/rc-map.png");
+  background-position: 0 310%;
+  background-size: cover;
+}
+
+.fh-bg {
+  background-image: url("../assets/screenshots/fishhook/fh-splash.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.ct-bg {
+  background-image: url("../assets/screenshots/canopy/ct-logo.png");
+  background-position: -10px -35px;
+  background-size: cover;
+}
+
+.ac-bg {
+  background-image: url("../assets/screenshots/ampcamp/ac-home.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@media all and (min-width: 600px) and (max-width: 900px) {
+  .quickshow-item {
+    width: 290px;
+    height: 290px;
+    margin: 16px;
+  }
+
+  .qs-info {
+    height: 60px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .quickshow-item {
+    width: 250px;
+    height: 250px;
+    margin: 13px;
+  }
+
+  .qs-info {
+    height: 50px;
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 500px) {
+  .quickshow-item {
+    width: 225px;
+    height: 225px;
+    margin: 10px;
+  }
+
+  .qs-info {
+    height: 50px;
+  }
+}
+
+.vert-center {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}

@@ -18,6 +18,16 @@
   color: white;
 }
 
+.floating-initials {
+  position: fixed;
+  z-index: 3;
+  top: 30px;
+  left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
 .nav-button {
   position: fixed;
   background: none;
@@ -75,8 +85,32 @@
   background-image: url("../assets/whiteX.png");
 }
 
-@media all and (min-width: 100px) and (max-width: 450px) {
+@media all and (min-width: 1250px) and (max-width: 10000px) {
   .floating-name {
+    display: inline;
+  }
+
+  .floating-initials {
+    display: none;
+  }
+}
+
+@media all and (min-width: 620px) and (max-width: 1250px) {
+  .floating-name {
+    display: none;
+  }
+
+  .floating-initials {
+    display: inline;
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 620px) {
+  .floating-name {
+    display: none;
+  }
+
+  .floating-initials {
     display: none;
   }
 }

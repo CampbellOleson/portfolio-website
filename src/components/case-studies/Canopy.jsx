@@ -1,6 +1,8 @@
 import React from "react";
 import General from "../../assets/screenshots/canopy/ct-general.png";
 import ClientSurvey from "../../assets/screenshots/canopy/ct-clientsurvey.png";
+import Form from "../../assets/screenshots/canopy/ct-taxform.png";
+import IRS from "../../assets/screenshots/canopy/ct-irs.png";
 import "../../stylesheets/case-studies/case-studies.css";
 import "../../stylesheets/case-studies/canopy.css";
 
@@ -29,8 +31,10 @@ const Canopy = () => {
         </div>
       </section>
 
+      <div className="arrow" />
+
       <div className="cs-img-wrapper cs-img-margin cs-tpf cs-tmo">
-        <img src={General} alt="RipCamp Splash Page" className="cs-img" />
+        <img src={General} alt="General page" className="cs-img" />
       </div>
 
       <div className="hor-center">
@@ -48,14 +52,23 @@ const Canopy = () => {
       <div className="hor-center">
         <div className="cs-textblock cs-bmo">
           <header>My Contribution</header>
-          <article>
+          <article className="cs-bmo">
             My primary contribution to Tax Prep was the creation of software
             logic that automatically filled out tax forms based on end-user
             input. I would read and interpret tax-form instructions, and then
             translate them into programs that our software environment would
             execute to fill out the form.
           </article>
-          <article>
+        </div>
+      </div>
+
+      <div className="cs-img-wrapper cs-img-margin cs-tpf cs-tmo">
+        <img src={Form} alt="Tax form" className="cs-img" />
+      </div>
+
+      <div className="hor-center">
+        <div className="cs-textblock cs-bmo">
+          <article className="cs-bmo">
             The IRS laid out rules for e-Filing tax returns in an XSD schema, so
             a lot of my QA work involved making sure that the software logic
             that we wrote returned data that was compatible with the schema. The
@@ -64,6 +77,15 @@ const Canopy = () => {
             logic, and dollar amounts that were outside the range permitted by
             the IRS.
           </article>
+        </div>
+      </div>
+
+      <div className="cs-img-wrapper cs-img-margin cs-tpf cs-tmo">
+        <img src={IRS} alt="IRS alert" className="cs-img-medium" />
+      </div>
+
+      <div className="hor-center">
+        <div className="cs-textblock cs-bmo">
           <article className="cs-bmo">
             I would also manually fill out tax scenarios in the end-user
             product, and then make sure that all the related tax forms were
