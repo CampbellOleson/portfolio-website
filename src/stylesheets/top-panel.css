@@ -1,68 +1,76 @@
 #top-panel-wrapper {
   width: 100%;
-  /* height: 55vh; */
   height: 100vh;
   min-height: 350px;
   background-color: #add8e6;
   display: flex;
   position: relative;
   overflow: hidden;
-  /* -webkit-box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1);
-  -moz-box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1);
-  box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1); */
+  border-left: 50% solid transparent;
 }
 
-.shape {
-  /* experiment */
-  width: 0;
-  height: 50px;
-  border-top: 100px solid #f9f871;
-  border-right: 3000px solid transparent;
-  animation: 1s ease-out 0s slideInFromTop;
-  position: relative;
+#scroll-button {
+  position: absolute;
+  left: 48%;
+  top: 90%;
+  width: 35px;
+  height: 35px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 3px;
+  background: 0;
+  animation: bounceArrow 1.5s ease 0s infinite;
+}
+
+#scroll-button:focus {
+  outline: 0;
+}
+
+.vert-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 #top-panel-wrapper section {
-  margin-left: 70%;
-  /* padding-top: 120px; */
-  width: 350px;
+  margin-left: 36%;
+  width: 800px;
   min-width: 350px;
   color: white;
 }
 
 #top-panel-wrapper header {
   font-weight: bolder;
-  font-size: 40px;
-  animation: slideInFromTop 0.5s ease-out -0.1s;
+  font-size: 80px;
+  animation: slideFarFromLeft 1s ease-out -0.5s;
 }
 
 #top-panel-wrapper main {
-  font-size: 28px;
-  animation: slideInFromLeft 0.8s ease-out -0.1s;
+  font-size: 40px;
+  animation: slideFarFromLeft 4s ease-out -2s;
 }
 
 #top-panel-wrapper p {
-  font-size: 20px;
-  animation: slideInFromBottom 1s ease-out -0.1s;
+  font-size: 30px;
+  animation: slideFarFromBottom 8s ease-out -5s;
 }
 
 #profile-photo {
-  background-image: url("../assets/campbell.png");
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 400px;
-}
-
-#profile-photo-vert-wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-#profile-photo-hor-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  width: 400px;
+  animation: bounceFromTop 1s ease 0s;
+  width: 200px;
+  height: 230px;
+  /* border-radius: 50%; */
+  border: 3px solid #67a7ce;
+  background-color: #fcfcd4;
+  position: absolute;
+  left: 18%;
+  /* -webkit-box-shadow: -1px 1px 13px -2px rgba(128, 128, 128, 1);
+  -moz-box-shadow: -1px 1px 13px -2px rgba(128, 128, 128, 1);
+  box-shadow: -1px 1px 13px -2px rgba(128, 128, 128, 1); */
 }
 
 .tpt {
@@ -102,38 +110,83 @@
   }
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideFarFromLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(1000%);
   }
   100% {
     transform: translateX(0);
   }
 }
 
-@keyframes slideInFromRight {
+@keyframes bounceFromRight {
   0% {
-    transform: translateX(100%);
+    transform: translateX(400%);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  98% {
+    transform: translateX(-10px);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0px);
   }
 }
 
-@keyframes slideInFromTop {
+@keyframes slideFarFromBottom {
   0% {
-    transform: translateY(-1000%);
+    transform: translateY(10000%);
   }
   100% {
     transform: translateY(0);
   }
 }
 
-@keyframes slideInFromBottom {
+@keyframes bounceFromTop {
   0% {
-    transform: translateY(1000%);
+    transform: translateY(-400%);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(-200%);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: translateY(-7px);
+  }
+  64% {
+    transform: translateY(0);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes bounceArrow {
+  0% {
+    transform: scale(1, 1) translateY(0) rotate(45deg);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0) rotate(45deg);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-30px) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0) rotate(45deg);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px) rotate(45deg);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0) rotate(45deg);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0) rotate(45deg);
   }
 }

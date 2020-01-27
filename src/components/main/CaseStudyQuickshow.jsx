@@ -7,10 +7,15 @@ class CaseStudyQuickshow extends React.Component {
       <Link to={`/case-studies/${this.props.url}`} className="quickshow-item">
         <div className={`qs-bg ${this.props.bg}`} />
         <div className="qs-info">
-          <p>{this.props.name}</p>
+          <header>{this.props.name}</header>
           <article>{this.props.summary}</article>
           <span>{this.props.tech}</span>
-          <div>See Project</div>
+          <div className="vert-bottom">
+            <div>
+              <div>See Project</div>
+              <div id="curvedarrow" />
+            </div>
+          </div>
         </div>
       </Link>
     );
