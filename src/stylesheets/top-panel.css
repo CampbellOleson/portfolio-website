@@ -1,18 +1,30 @@
 #top-panel-wrapper {
   width: 100%;
-  height: 55vh;
+  /* height: 55vh; */
+  height: 100vh;
   min-height: 350px;
   background-color: #add8e6;
   display: flex;
   position: relative;
-  -webkit-box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1);
+  overflow: hidden;
+  /* -webkit-box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1);
   -moz-box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1);
-  box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1);
+  box-shadow: -1px 2px 5px 0px rgba(128, 128, 128, 1); */
+}
+
+.shape {
+  /* experiment */
+  width: 0;
+  height: 50px;
+  border-top: 100px solid #f9f871;
+  border-right: 3000px solid transparent;
+  animation: 1s ease-out 0s slideInFromTop;
+  position: relative;
 }
 
 #top-panel-wrapper section {
-  margin-left: 14%;
-  padding-top: 120px;
+  margin-left: 70%;
+  /* padding-top: 120px; */
   width: 350px;
   min-width: 350px;
   color: white;
@@ -21,14 +33,17 @@
 #top-panel-wrapper header {
   font-weight: bolder;
   font-size: 40px;
+  animation: slideInFromTop 0.5s ease-out -0.1s;
 }
 
 #top-panel-wrapper main {
   font-size: 28px;
+  animation: slideInFromLeft 0.8s ease-out -0.1s;
 }
 
 #top-panel-wrapper p {
   font-size: 20px;
+  animation: slideInFromBottom 1s ease-out -0.1s;
 }
 
 #profile-photo {
@@ -84,5 +99,41 @@
 
   #profile-photo {
     display: none;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-1000%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(1000%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
