@@ -1,10 +1,10 @@
-#tp-wrapper {
-  position: relative;
-  width: inherit;
-  height: 100vh;
-  background-color: #add8e6;
-  display: flex;
-  overflow: hidden;
+#profile-photo {
+  animation: bounceFromTop 1s ease 0s;
+  width: 200px;
+  height: 230px;
+  border: 3px solid #67a7ce;
+  background-color: #fcfcd4;
+  margin-left: 8%;
 }
 
 #scroll-arrow {
@@ -27,49 +27,11 @@
   outline: 0;
 }
 
-#tp-wrapper section {
-  margin-left: 36%;
-  width: 800px;
-  min-width: 350px;
-  color: white;
-}
-
-#tp-wrapper header {
-  font-weight: bolder;
-  font-size: 80px;
-  animation: slideFarFromRight 1s ease-out -0.5s;
-}
-
-#tp-wrapper main {
-  font-size: 40px;
-  animation: slideFarFromRight 5s ease-out -3s;
-}
-
-#tp-wrapper p {
-  font-size: 30px;
-  animation: slideFarFromBottom 7s ease-out -4s;
-}
-
-#profile-photo {
-  animation: bounceFromTop 1s ease 0s;
-  width: 200px;
-  height: 230px;
-  border: 3px solid #67a7ce;
-  background-color: #fcfcd4;
-  position: absolute;
-  left: 18%;
-}
-
-.tpt {
-  padding-bottom: 10px;
-}
-
 #tp-arrow {
   height: 0;
   width: 0;
   border-left: 740px solid transparent;
   border-right: 740px solid transparent;
-  /* need to add to queries */
   border-top: 100px solid #add8e6;
   background-color: transparent;
 }
@@ -81,40 +43,207 @@
   margin-bottom: 80px;
 }
 
-@media all and (min-width: 100px) and (max-width: 450px) {
-  #top-panel-wrapper {
-    width: 100%;
-    height: 35vh;
-    min-height: 250px;
-    background-color: #add8e6;
-  }
+.tp-content {
+  display: flex;
+  justify-content: center;
+}
 
-  #top-panel-wrapper section {
-    margin-left: 8%;
-    padding-top: 50px;
-    width: 200px;
-    min-width: 180px;
-  }
+.tp-text {
+  padding-left: 35px;
+  width: 800px;
+  color: white;
+}
 
-  #top-panel-wrapper header {
-    font-weight: bolder;
-    font-size: 30px;
-  }
+.tp-text > header {
+  font-weight: bolder;
+  font-size: 80px;
+  animation: slideFarFromRight 1s ease-out -0.5s;
+}
 
-  #top-panel-wrapper main {
-    font-size: 20px;
-  }
+.tp-text > main {
+  font-size: 40px;
+  animation: slideFarFromRight 5s ease-out -3s;
+}
 
-  #top-panel-wrapper p {
-    font-size: 11px;
-  }
+.tp-text > p {
+  font-size: 30px;
+  animation: slideFarFromBottom 7s ease-out -4s;
+}
 
+#tp-wrapper {
+  position: relative;
+  width: inherit;
+  height: 100vh;
+  background-color: #add8e6;
+  display: flex;
+  overflow: hidden;
+}
+
+.tpt {
+  padding-bottom: 10px;
+}
+
+@media all and (min-width: 1100px) and (max-width: 1200px) {
   #profile-photo {
-    display: none;
+    width: 180px;
+    height: 207px;
+    margin-left: 5%;
+  }
+
+  .tp-text {
+    width: 720px;
+    padding-left: 30px;
+  }
+
+  .tp-text > header {
+    font-size: 75px;
+  }
+
+  .tp-text > main {
+    font-size: 35px;
+  }
+
+  .tp-text > p {
+    font-size: 28px;
   }
 }
 
-/* animations */
+@media all and (min-width: 1000px) and (max-width: 1100px) {
+  #profile-photo {
+    width: 160px;
+    height: 184px;
+    margin-left: 3%;
+  }
+
+  .tp-text {
+    width: 620px;
+    padding-left: 30px;
+  }
+
+  .tp-text > header {
+    font-size: 65px;
+  }
+
+  .tp-text > main {
+    font-size: 32px;
+  }
+
+  .tp-text > p {
+    font-size: 23px;
+  }
+
+  .tpt {
+    padding-bottom: 8px;
+  }
+}
+
+@media all and (min-width: 750px) and (max-width: 1000px) {
+  #profile-photo {
+    width: 165px;
+    height: 190px;
+    margin-left: 2%;
+  }
+
+  .tp-text {
+    width: 340px;
+    padding-left: 30px;
+  }
+
+  .tp-text > header {
+    font-size: 50px;
+  }
+
+  .tp-text > main {
+    font-size: 25px;
+  }
+
+  .tp-text > p {
+    font-size: 18px;
+  }
+
+  .tpt {
+    padding-bottom: 5px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  #profile-photo {
+    display: none;
+  }
+
+  .tp-text {
+    width: 340px;
+    padding-left: 10px;
+  }
+
+  .tp-text > header {
+    font-size: 55px;
+  }
+
+  .tp-text > main {
+    font-size: 27px;
+  }
+
+  .tp-text > p {
+    font-size: 20px;
+  }
+
+  .tpt {
+    padding-bottom: 5px;
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 500px) {
+  #profile-photo {
+    display: none;
+  }
+
+  .tp-text {
+    width: 300px;
+    padding-left: 0;
+    padding-right: 25px;
+  }
+
+  .tp-text > header {
+    font-size: 45px;
+  }
+
+  .tp-text > main {
+    font-size: 25px;
+  }
+
+  .tp-text > p {
+    font-size: 18px;
+  }
+
+  .tpt {
+    padding-bottom: 5px;
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 420px) {
+  .tp-text {
+    width: 70%;
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+  .tp-text > header {
+    font-size: 40px;
+  }
+
+  .tp-text > main {
+    font-size: 25px;
+  }
+
+  .tp-text > p {
+    font-size: 18px;
+  }
+
+  .tpt {
+    padding-bottom: 3px;
+  }
+}
 
 @keyframes slideFarFromRight {
   0% {
