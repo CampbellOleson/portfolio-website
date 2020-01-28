@@ -1,15 +1,13 @@
-#top-panel-wrapper {
-  width: 100%;
+#tp-wrapper {
+  position: relative;
+  width: inherit;
   height: 100vh;
-  min-height: 350px;
   background-color: #add8e6;
   display: flex;
-  position: relative;
   overflow: hidden;
-  border-left: 50% solid transparent;
 }
 
-#scroll-button {
+#scroll-arrow {
   position: absolute;
   left: 48%;
   top: 90%;
@@ -25,56 +23,62 @@
   animation: bounceArrow 1.5s ease 0s infinite;
 }
 
-#scroll-button:focus {
+#scroll-arrow:focus {
   outline: 0;
 }
 
-.vert-center {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-#top-panel-wrapper section {
+#tp-wrapper section {
   margin-left: 36%;
   width: 800px;
   min-width: 350px;
   color: white;
 }
 
-#top-panel-wrapper header {
+#tp-wrapper header {
   font-weight: bolder;
   font-size: 80px;
-  animation: slideFarFromLeft 1s ease-out -0.5s;
+  animation: slideFarFromRight 1s ease-out -0.5s;
 }
 
-#top-panel-wrapper main {
+#tp-wrapper main {
   font-size: 40px;
-  animation: slideFarFromLeft 4s ease-out -2s;
+  animation: slideFarFromRight 5s ease-out -3s;
 }
 
-#top-panel-wrapper p {
+#tp-wrapper p {
   font-size: 30px;
-  animation: slideFarFromBottom 8s ease-out -5s;
+  animation: slideFarFromBottom 7s ease-out -4s;
 }
 
 #profile-photo {
   animation: bounceFromTop 1s ease 0s;
   width: 200px;
   height: 230px;
-  /* border-radius: 50%; */
   border: 3px solid #67a7ce;
   background-color: #fcfcd4;
   position: absolute;
   left: 18%;
-  /* -webkit-box-shadow: -1px 1px 13px -2px rgba(128, 128, 128, 1);
-  -moz-box-shadow: -1px 1px 13px -2px rgba(128, 128, 128, 1);
-  box-shadow: -1px 1px 13px -2px rgba(128, 128, 128, 1); */
 }
 
 .tpt {
   padding-bottom: 10px;
+}
+
+#tp-arrow {
+  height: 0;
+  width: 0;
+  border-left: 740px solid transparent;
+  border-right: 740px solid transparent;
+  /* need to add to queries */
+  border-top: 100px solid #add8e6;
+  background-color: transparent;
+}
+
+.tp-buffer-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 @media all and (min-width: 100px) and (max-width: 450px) {
@@ -110,27 +114,14 @@
   }
 }
 
-@keyframes slideFarFromLeft {
+/* animations */
+
+@keyframes slideFarFromRight {
   0% {
     transform: translateX(1000%);
   }
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes bounceFromRight {
-  0% {
-    transform: translateX(400%);
-  }
-  80% {
-    transform: translateX(0px);
-  }
-  98% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
 

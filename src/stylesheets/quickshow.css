@@ -23,13 +23,7 @@
   border-radius: 4px;
 }
 
-.vert-bottom {
-  height: inherit;
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.vert-bottom > div {
+.qs-hover-bottom {
   display: flex;
 }
 
@@ -176,10 +170,4 @@
   .qs-info {
     height: 50px;
   }
-}
-
-.vert-center {
-  height: inherit;
-  display: flex;
-  flex-direction: column;
 }

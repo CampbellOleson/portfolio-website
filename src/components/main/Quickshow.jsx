@@ -11,7 +11,7 @@ class CaseStudyQuickshow extends React.Component {
           <article>{this.props.summary}</article>
           <span>{this.props.tech}</span>
           <div className="vert-bottom">
-            <div>
+            <div className="qs-hover-bottom">
               <div>See Project</div>
               <div id="curvedarrow" />
             </div>

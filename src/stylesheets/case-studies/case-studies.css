@@ -73,19 +73,6 @@
   padding-top: 25px;
 }
 
-.vert-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.vert-bottom {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  margin-top: 50px;
-}
-
 .hor-center {
   display: flex;
   justify-content: center;

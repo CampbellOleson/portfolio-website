@@ -1,56 +1,18 @@
 #root {
   font-family: sans-serif;
+  overflow: hidden;
 }
 
-#aml-cml-wrapper {
-  height: 35vh;
-  min-height: 150px;
-  display: flex;
-}
-
-.selector-link {
-  text-decoration: none;
-}
-
-.link-box {
-  width: 50%;
-  height: inherit;
-  min-height: inherit;
+.vert-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: #D3C0DB; */
-  background-color: #ffcba4;
-  transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
-.link-box span {
+.vert-bottom {
+  height: inherit;
   display: flex;
-  justify-content: center;
-  font-size: 35px;
-  color: white;
-}
-
-.link-box p {
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-
-.link-box:hover {
-  transform: scale(1.05);
-}
-
-@media all and (min-width: 100px) and (max-width: 450px) {
-  .link-box span {
-    font-size: 22px;
-  }
-
-  .link-box p {
-    font-size: 11px;
-  }
-
-  #aml-cml-wrapper {
-    height: 25vh;
-  }
+  flex-direction: column-reverse;
 }

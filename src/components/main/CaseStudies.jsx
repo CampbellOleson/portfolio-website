@@ -1,5 +1,5 @@
 import React from "react";
-import CaseStudyQuickshow from "./CaseStudyQuickshow";
+import CaseStudyQuickshow from "./Quickshow";
 import "../../stylesheets/case-studies.css";
 import "../../stylesheets/quickshow.css";
 

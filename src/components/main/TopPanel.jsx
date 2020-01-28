@@ -14,25 +14,29 @@ const TopPanel = () => {
   };
 
   return (
-    <div id="top-panel-wrapper">
-      <div className="vert-center">
-        <section>
-          <header className="tpt">Hello World!</header>
-          <main className="tpt">
-            I heard you're looking for a web developer.
-          </main>
-          <p className="tpt">
-            If you're into responsive interfaces, modern design, and clean,
-            modular code, then I'm your guy.
-          </p>
-        </section>
-        <img id="profile-photo" src={ProfilePhoto} alt="" />
+    <div>
+      <div id="tp-wrapper">
+        <div className="vert-center">
+          <section>
+            <header className="tpt">Hello World!</header>
+            <main className="tpt">
+              I heard you're looking for a web developer.
+            </main>
+            <p className="tpt">
+              If you're into responsive interfaces, modern design, and clean,
+              modular code, then I'm your guy.
+            </p>
+          </section>
+          <img id="profile-photo" src={ProfilePhoto} alt="" />
+        </div>
+        <button
+          id="scroll-arrow"
+          onClick={() => scrollToRef("case-studies-wrapper")}
+        />
       </div>
-      <button
-        id="scroll-button"
-        onClick={() => scrollToRef("case-studies-wrapper")}
-      />
-      <div className="downwards-arrow" />
+      <div className="tp-buffer-wrapper">
+        <div id="tp-arrow" />
+      </div>
     </div>
   );
 };

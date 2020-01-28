@@ -24,21 +24,21 @@ class Nav extends React.Component {
                   Home
                 </Link>
               </li>
-              <li className="nav-link">
+              {/* <li className="nav-link">
                 <Link to="/about" onClick={this.toggleModal}>
                   About
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-link">
                 <a href={Resume} onClick={this.toggleModal}>
                   Resume
                 </a>
               </li>
-              <li className="nav-link">
+              {/* <li className="nav-link">
                 <Link to="/contact" onClick={this.toggleModal}>
                   Contact
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
