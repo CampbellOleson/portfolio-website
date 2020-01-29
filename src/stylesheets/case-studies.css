@@ -1,8 +1,9 @@
 #case-studies-wrapper {
   width: inherit;
-  height: 450px;
+  height: 550px;
   display: flex;
   flex-direction: column;
+  background-color: #fcfcd4;
 }
 
 #case-studies-wrapper > div {
@@ -10,9 +11,9 @@
   justify-content: center;
 }
 
-#case-studies-wrapper > div > header {
+#cs-header {
   font-size: 28px;
-  margin-top: 28px;
+  padding-top: 28px;
   margin-bottom: 14px;
   font-weight: bolder;
 }
@@ -35,7 +36,7 @@
 
 @media all and (min-width: 750px) and (max-width: 900px) {
   #case-studies-wrapper {
-    height: 390px;
+    height: 490px;
   }
 
   #case-studies-wrapper > div > p {
@@ -47,7 +48,7 @@
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   #case-studies-wrapper {
-    height: 330px;
+    height: 430px;
   }
 
   #case-studies-wrapper > div > p {
@@ -59,7 +60,7 @@
 
 @media all and (min-width: 100px) and (max-width: 500px) {
   #case-studies-wrapper {
-    height: 300px;
+    height: 400px;
   }
 
   #case-studies-wrapper > div > p {

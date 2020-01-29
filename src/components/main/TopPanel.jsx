@@ -31,10 +31,7 @@ const TopPanel = () => {
             </section>
           </div>
         </div>
-        <button
-          id="scroll-arrow"
-          onClick={() => scrollToRef("case-studies-wrapper")}
-        />
+        <button id="scroll-arrow" onClick={() => scrollToRef("am-wrapper")} />
       </div>
       <div className="tp-buffer-wrapper">
         <div id="tp-arrow" />

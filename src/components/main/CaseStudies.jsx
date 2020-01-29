@@ -7,7 +7,7 @@ const CaseStudies = () => {
   return (
     <div id="case-studies-wrapper">
       <div>
-        <header>My Recent Work</header>
+        <header id="cs-header">My Recent Work</header>
       </div>
       <section>
         <ul>

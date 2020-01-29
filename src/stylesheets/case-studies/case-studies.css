@@ -73,11 +73,6 @@
   padding-top: 25px;
 }
 
-.hor-center {
-  display: flex;
-  justify-content: center;
-}
-
 .cs-container {
   width: inherit;
   background-color: whitesmoke;
