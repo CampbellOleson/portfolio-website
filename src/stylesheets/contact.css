@@ -3,8 +3,10 @@
   width: 70vw;
   padding-left: 15vw;
   padding-right: 15vw;
-  color: white;
-  background-color: #334a52;
+  color: #334a52;
+  /* background-color: #334a52; */
+  /* background-color: #fcfcd4; */
+  background-color: #effcff;
 }
 
 .cf-header {

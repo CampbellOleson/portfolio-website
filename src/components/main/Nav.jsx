@@ -1,7 +1,8 @@
 import React from "react";
+import scrollToRef from "../../utils/scrollToRef";
 import Resume from "../../assets/Resume.pdf";
-import { Link } from "react-router-dom";
 import "../../stylesheets/nav.css";
+import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
   constructor(props) {
@@ -19,34 +20,72 @@ class Nav extends React.Component {
         <div id="nav-modal" className="modal">
           <div>
             <ul>
-              <li className="nav-link">
-                <Link to="/" onClick={this.toggleModal}>
-                  Home
-                </Link>
-              </li>
-              {/* <li className="nav-link">
-                <Link to="/about" onClick={this.toggleModal}>
-                  About
-                </Link>
-              </li> */}
+              <Link to="/">
+                <button
+                  className="anchor-button"
+                  onClick={() => {
+                    scrollToRef("tp-wrapper");
+                    this.toggleModal();
+                  }}
+                >
+                  <li className="nav-link">Home</li>
+                </button>
+              </Link>
+              <Link to="/">
+                <button
+                  className="anchor-button"
+                  onClick={() => {
+                    scrollToRef("am-wrapper");
+                    this.toggleModal();
+                  }}
+                >
+                  <li className="nav-link">About</li>
+                </button>
+              </Link>
+              <Link to="/">
+                <button
+                  className="anchor-button"
+                  onClick={() => {
+                    scrollToRef("cs-header");
+                    this.toggleModal();
+                  }}
+                >
+                  <li className="nav-link">Projects</li>
+                </button>
+              </Link>
               <li className="nav-link">
                 <a href={Resume} onClick={this.toggleModal}>
                   Resume
                 </a>
               </li>
-              {/* <li className="nav-link">
-                <Link to="/contact" onClick={this.toggleModal}>
-                  Contact
-                </Link>
-              </li> */}
+              <Link to="/">
+                <button
+                  className="anchor-button"
+                  onClick={() => {
+                    scrollToRef("cf-wrapper");
+                    this.toggleModal();
+                  }}
+                >
+                  <li className="nav-link">Contact</li>
+                </button>
+              </Link>
             </ul>
           </div>
         </div>
-
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            scrollToRef("tp-wrapper");
+          }}
+        >
           <p className="floating-name">Campbell Oleson</p>
         </Link>
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            scrollToRef("tp-wrapper");
+          }}
+        >
           <p className="floating-initials">C.O.</p>
         </Link>
       </div>

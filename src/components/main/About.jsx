@@ -1,18 +1,9 @@
 import React from "react";
+import scrollToRef from "../../utils/scrollToRef";
 import "../../stylesheets/about.css";
 import "../../stylesheets/skills.css";
 
 const About = () => {
-  const scrollToRef = id => {
-    const el = document.getElementById(id);
-    if (el) {
-      window.scrollTo({
-        top: el.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  };
-
   return (
     <div>
       <div id="am-wrapper">

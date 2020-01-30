@@ -1,18 +1,9 @@
 import React from "react";
 import ProfilePhoto from "../../assets/campbell.png";
+import scrollToRef from "../../utils/scrollToRef";
 import "../../stylesheets/top-panel.css";
 
 const TopPanel = () => {
-  const scrollToRef = id => {
-    const el = document.getElementById(id);
-    if (el) {
-      window.scrollTo({
-        top: el.offsetTop,
-        behavior: "smooth"
-      });
-    }
-  };
-
   return (
     <div className="tp">
       <div id="tp-wrapper">

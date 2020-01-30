@@ -3,6 +3,23 @@
   transform: translate(0, 100vh);
 }
 
+.anchor-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  text-align: left;
+}
+
+.anchor-button:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+.anchor-button:focus {
+  outline: none;
+}
+
 .inactive-modal {
   top: -100vh;
   transform: translate(0, -100vh);
@@ -35,7 +52,7 @@
   border: 0;
   background-position: center;
   background-size: cover;
-  z-index: 3;
+  z-index: 4;
   top: 30px;
   right: 40px;
   width: 30px;
@@ -55,13 +72,13 @@
   top: -100vh;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
-  background-color: #d3c0db;
+  z-index: 3;
+  background-color: #90668d;
   transition: all 0.6s ease-in-out;
   position: fixed;
   display: flex;
   justify-content: center;
-  opacity: 0.95;
+  opacity: 0.98;
 }
 
 .nav-link a {
@@ -71,8 +88,9 @@
 
 #nav-modal ul {
   list-style: none;
-  color: white;
   font-size: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav-modal > div {
