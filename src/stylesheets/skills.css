@@ -1,0 +1,98 @@
+.skill-bubble {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  -webkit-box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0 60px;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (min-width: 600px) and (max-width: 800px) {
+  .skill-bubble {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media all and (min-width: 450px) and (max-width: 600px) {
+  .skill-bubble {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 450px) {
+  .skill-bubble {
+    display: none;
+  }
+
+  .skills-container {
+    margin: 20px 0 20px 0;
+  }
+}
+
+#img-js {
+  background-image: url("../assets/skills/javascript.png");
+}
+
+#img-ruby {
+  background-image: url("../assets/skills/ruby.png");
+}
+
+#img-rails {
+  background-image: url("../assets/skills/rubyonrails.png");
+}
+
+#img-react {
+  background-image: url("../assets/skills/react.png");
+}
+
+#img-redux {
+  background-image: url("../assets/skills/redux.png");
+}
+
+#img-node {
+  background-image: url("../assets/skills/node.png");
+}
+
+#img-apollo {
+  background-image: url("../assets/skills/apolloGL.png");
+}
+
+#img-docker {
+  background-image: url("../assets/skills/docker.png");
+}
+
+#img-git {
+  background-image: url("../assets/skills/git.png");
+}
+
+#img-webpack {
+  background-image: url("../assets/skills/webpack.png");
+}
+
+#img-post {
+  background-image: url("../assets/skills/post.png");
+}
+
+#img-aws {
+  background-image: url("../assets/skills/aws.png");
+}
+
+#img-mongo {
+  background-image: url("../assets/skills/mongo.png");
+}

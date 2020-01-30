@@ -2,29 +2,9 @@
   animation: bounceFromTop 1s ease 0s;
   width: 200px;
   height: 230px;
-  border: 3px solid #96AFB8;
+  border: 3px solid #96afb8;
   background-color: #fcfcd4;
   margin-left: 8%;
-}
-
-#scroll-arrow {
-  position: absolute;
-  left: 48%;
-  top: 90%;
-  width: 35px;
-  height: 35px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  border: solid white;
-  border-width: 0 10px 10px 0;
-  display: inline-block;
-  padding: 3px;
-  background: 0;
-  animation: bounceArrow 1.5s ease 0s infinite;
-}
-
-#scroll-arrow:focus {
-  outline: 0;
 }
 
 #tp-arrow {

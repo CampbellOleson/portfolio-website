@@ -14,7 +14,7 @@ const TopPanel = () => {
   };
 
   return (
-    <div>
+    <div className="tp">
       <div id="tp-wrapper">
         <div className="vert-center">
           <div className="tp-content">
@@ -31,7 +31,11 @@ const TopPanel = () => {
             </section>
           </div>
         </div>
-        <button id="scroll-arrow" onClick={() => scrollToRef("am-wrapper")} />
+        <button
+          id="scroll-arrow"
+          className="is-absolute"
+          onClick={() => scrollToRef("am-wrapper")}
+        />
       </div>
       <div className="tp-buffer-wrapper">
         <div id="tp-arrow" />

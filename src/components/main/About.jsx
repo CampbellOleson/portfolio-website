@@ -1,5 +1,6 @@
 import React from "react";
 import "../../stylesheets/about.css";
+import "../../stylesheets/skills.css";
 
 const About = () => {
   const scrollToRef = id => {
@@ -28,33 +29,39 @@ const About = () => {
           PostgreSQL, and MongoDB.
         </article>
         <div className="am-block-wrapper">
-          <div className="am-block">
-            <article>
-              My career began in the Business Scholars program at the University
-              of Utah. There, I was connected with an internship at Canopy, Inc.
-              where I worked for four months and discovered my passion for
-              software development.
-            </article>
-            <div className="u-bg" />
+          <div className="hor-center">
+            <div className="am-block">
+              <article>
+                My career began in the Business Scholars program at the
+                University of Utah. There, I was connected with an internship at
+                Canopy, Inc. where I worked for four months and discovered my
+                passion for software development.
+              </article>
+              <div className="u-bg" />
+            </div>
           </div>
-          <div className="am-block">
-            <article>
-              In searching for the fastest way to learn web development I came
-              upon App Academy: a demanding, 6-month immersive bootcamp with a
-              3% acceptance rate. I was accepted in, and graduated from App
-              Academy in October of 2019.
-            </article>
-            <div className="a-bg" />
+          <div className="hor-center">
+            <div className="am-block">
+              <article>
+                In searching for the fastest way to learn web development I came
+                upon App Academy: a demanding, 6-month immersive bootcamp with a
+                3% acceptance rate. I was accepted in, and graduated from App
+                Academy in October of 2019.
+              </article>
+              <div className="a-bg" />
+            </div>
           </div>
-          <div className="am-block">
-            <article>
-              I have since been working on solo projects and adding to my
-              toolset by taking courses on Pluralsight. I am determined to
-              always keep learning, and find an opportunity to prove myself in
-              the industry. I am a junior, but I am hungry, and I'm excited to
-              see where I go next!
-            </article>
-            <div className="q-bg" />
+          <div className="hor-center">
+            <div className="am-block">
+              <article>
+                I have since been working on solo projects and adding to my
+                toolset by taking courses on Pluralsight. I am determined to
+                always keep learning, and find an opportunity to prove myself in
+                the industry. I am a junior, but I am hungry, and I'm excited to
+                see where I go next!
+              </article>
+              <div className="q-bg" />
+            </div>
           </div>
         </div>
 
@@ -72,16 +79,16 @@ const About = () => {
 
         <div className="skills-container">
           <div className="skills-row">
-            <div id="img-js" className="skill-bubble" />
             <div id="img-ruby" className="skill-bubble" />
             <div id="img-rails" className="skill-bubble" />
+            <div id="img-js" className="skill-bubble" />
+            <div id="img-node" className="skill-bubble" />
             <div id="img-react" className="skill-bubble" />
             <div id="img-redux" className="skill-bubble" />
-            <div id="img-node" className="skill-bubble" />
-            <div id="img-docker" className="skill-bubble" />
+            <div id="img-apollo" className="skill-bubble" />
           </div>
           <div className="skills-row">
-            <div id="img-apollo" className="skill-bubble" />
+            <div id="img-docker" className="skill-bubble" />
             <div id="img-git" className="skill-bubble" />
             <div id="img-post" className="skill-bubble" />
             <div id="img-aws" className="skill-bubble" />
@@ -94,10 +101,14 @@ const About = () => {
           React, Redux, Apollo GraphQL, Ruby on Rails, NodeJS, PostgreSQL, and
           MongoDB.
         </article>
-        <button id="scroll-arrow" onClick={() => scrollToRef("cs-header")} />
+        <button
+          id="scroll-arrow"
+          className="is-relative has-margin"
+          onClick={() => scrollToRef("cs-header")}
+        />
       </div>
-      <div className="cs-buffer-wrapper">
-        <div id="cs-arrow" />
+      <div className="am-buffer-wrapper">
+        <div id="am-arrow" />
       </div>
     </div>
   );
