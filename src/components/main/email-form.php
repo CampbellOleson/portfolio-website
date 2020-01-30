@@ -2,6 +2,6 @@
 if($_POST["message"]) {
     mail("campbellsoleson@gmail.com", 
     "Form to email message", $_POST["message"], 
-    "From: an@email.address");
+    "From: mystery@email.address");
 }
 ?>
