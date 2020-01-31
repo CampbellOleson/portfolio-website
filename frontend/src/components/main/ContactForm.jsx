@@ -11,6 +11,7 @@ class Contact extends React.Component {
       fname: "",
       lname: "",
       email: "",
+      phone: "",
       message: "",
       mailSent: false,
       error: null
@@ -61,6 +62,14 @@ class Contact extends React.Component {
               name="email"
               placeholder="Your email"
               onChange={e => this.setState({ email: e.target.value })}
+            />
+            <label>Phone</label>
+            <input
+              type="phone"
+              id="phone"
+              name="phone"
+              placeholder="Your phone number"
+              onChange={e => this.setState({ phone: e.target.value })}
             />
             <label>Subject</label>
             <textarea

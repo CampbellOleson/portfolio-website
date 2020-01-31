@@ -11,6 +11,19 @@ server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
 server.post("/send", (req, res) => {
+  const body = req.body;
+
+  const emailHTML = `
+  <div>
+    <h3>Email from <strong>${body.fname} ${body.lname}</strong></h3>
+    <p><strong>Contact info:</strong></p>
+    <p><strong>Email:</strong> ${body.email}</p>
+    <p><strong>Phone:</strong> ${body.phone}</p>
+    <p><strong>Message:</strong></p>
+    <p>${body.message}</p>
+  </div>
+  `;
+
   let transporter = nodemailer.createTransport({
     host: "campbelloleson.dev",
     port: 465,
@@ -26,18 +39,14 @@ server.post("/send", (req, res) => {
 
   transporter
     .sendMail({
-      from: "Nodemailer <notifications@campbelloleson.dev>",
-      to: 'gracemenani@gmail.com',
-      subject: "Hello ✔",
-      text: "Hi this is campbell, sending you a message via nodemailer",
-      html: "<b>Hello world?</b>"
+      from: "Portfolio Website <notifications@campbelloleson.dev>",
+      to: "campbellsoleson@gmail.com",
+      subject: "Portfolio Visitor",
+      text: req.body.message,
+      html: emailHTML
     })
     .then(() => console.log("Email sent ;)"))
     .catch(e => {
-      console.log("\nERROR:\n");
-      console.log(
-        "================================================================\n"
-      );
       console.log(e);
     });
 });
