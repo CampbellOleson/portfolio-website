@@ -19,6 +19,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 #footer-wrapper section {

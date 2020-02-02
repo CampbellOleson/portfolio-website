@@ -15,7 +15,8 @@
     "react-scripts": "^3.3.0",
     "react-transition-group": "^4.3.0",
     "sass": "^1.24.4",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "validator": "^12.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

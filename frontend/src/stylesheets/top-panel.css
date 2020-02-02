@@ -2,30 +2,46 @@
   animation: bounceFromTop 1s ease 0s;
   width: 200px;
   height: 230px;
-  border: 3px solid #96afb8;
-  background-color: #fcfcd4;
+  border: 3px solid white;
+  backdrop-filter: blur(30px);
+  border-radius: 4px;
   margin-left: 8%;
+  -webkit-box-shadow: -1px 5px 141px -42px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 5px 141px -42px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 5px 141px -42px rgba(0, 0, 0, 0.75);
 }
 
-#tp-arrow {
-  height: 0;
+.tp-arrow {
   width: 0;
+  height: 0;
+  border-bottom: 100px solid #334a52;
+}
+
+.right {
   border-left: 740px solid transparent;
+}
+
+.left {
   border-right: 740px solid transparent;
-  border-top: 100px solid #add8e6;
-  background-color: transparent;
 }
 
 .tp-buffer-wrapper {
   height: 20vh;
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.tp-buffer {
+  height: 50px;
+  width: 100%;
   background-color: #334a52;
 }
 
 .tp-content {
   display: flex;
   justify-content: center;
+  text-shadow: 1px 1px 20px grey;
 }
 
 .tp-text {
@@ -54,7 +70,8 @@
   position: relative;
   width: inherit;
   height: 100vh;
-  background-color: #add8e6;
+  /* background-color: #add8e6; */
+  background-color: transparent;
   display: flex;
   overflow: hidden;
 }

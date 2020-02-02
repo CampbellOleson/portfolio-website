@@ -1,46 +1,163 @@
 #cf-wrapper {
-  height: 100vh;
-  width: 70vw;
-  padding-left: 15vw;
-  padding-right: 15vw;
-  color: #334a52;
-  /* background-color: #334a52; */
-  /* background-color: #fcfcd4; */
-  background-color: #effcff;
+  position: relative;
+  height: 700px;
+  width: inherit;
+  color: white;
+}
+
+.cf-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../assets/tetons.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 .cf-header {
   font-size: 40px;
-  font-weight: bolder;
   padding: 40px;
+  font-weight: bolder;
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+.cf-bottom-block {
+  height: 100px;
+}
+
+.error {
+  font-weight: bold;
+  color: red;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.success-message > p {
+  font-size: 50px;
+  text-align: center;
+}
+
+.field {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 15px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical;
+  transition: all 0.2s ease-in-out;
+  font-size: 20px;
+  padding-left: 35px;
 }
-input[type="submit"] {
+
+.field:focus {
+  outline: none;
+}
+
+.field:hover {
+  transform: scale(1.03);
+}
+
+.form-wrapper {
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 600px;
+  width: 400px;
+  border-radius: 5px;
+  padding: 0 40px 0 40px;
+  backdrop-filter: blur(20px);
+  -webkit-box-shadow: -1px 5px 141px -55px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 5px 141px -55px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 5px 141px -55px rgba(0, 0, 0, 0.75);
+}
+
+textarea {
+  resize: none;
+}
+
+.success-message {
+  color: white;
+  font-size: 30px;
+  backdrop-filter: blur(40px);
+  border-radius: 4px;
+  padding-top: 10px;
+}
+
+.submit-button {
+  height: 50px;
+  width: 180px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
   background-color: #4caf50;
   color: white;
-  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
-input[type="submit"]:hover {
+
+.submit-button:hover {
   background-color: #45a049;
+  transform: scale(1.03);
 }
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+
+.submit-button:focus {
+  outline: none;
+}
+
+@media all and (min-width: 0) and (max-width: 500px) {
+  .form-wrapper {
+    margin-top: 0;
+    width: 80%;
+    padding: 0 10% 0 10%;
+  }
+
+  #cf-wrapper {
+    height: 600px;
+  }
+
+  .cf-header {
+    font-size: 30px;
+    padding: 30px 0 10px 0;
+  }
+}
+
+/* animation */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

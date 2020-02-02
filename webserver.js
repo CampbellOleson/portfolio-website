@@ -12,10 +12,11 @@ server.use(bodyParser.json());
 
 server.post("/send", (req, res) => {
   const body = req.body;
-
+  const company = body.company ? body.company : "an unspecified company";
+  const info = {};
   const emailHTML = `
   <div>
-    <h3>Email from <strong>${body.fname} ${body.lname}</strong></h3>
+    <h3><strong>${body.name} at ${company} is interested in you</strong></h3>
     <p><strong>Contact info:</strong></p>
     <p><strong>Email:</strong> ${body.email}</p>
     <p><strong>Phone:</strong> ${body.phone}</p>
@@ -45,9 +46,16 @@ server.post("/send", (req, res) => {
       text: req.body.message,
       html: emailHTML
     })
-    .then(() => console.log("Email sent ;)"))
+    .then(() => {
+      console.log("Email sent ;)");
+      info["mailSent"] = true;
+      info["error"] = "";
+      res.send({ info });
+    })
     .catch(e => {
-      console.log(e);
+      info["mailSent"] = false;
+      info["error"] = e;
+      res.send({ info });
     });
 });
 

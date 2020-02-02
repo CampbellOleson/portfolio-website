@@ -28,9 +28,17 @@ const TopPanel = () => {
           onClick={() => scrollToRef("am-wrapper")}
         />
       </div>
-      <div className="tp-buffer-wrapper">
-        <div id="tp-arrow" />
+      <div>
+        <div className="tp-buffer-wrapper">
+          <div className="vert-bottom">
+            <div className="tp-arrow left" />
+          </div>
+          <div className="vert-bottom">
+            <div className="tp-arrow right" />
+          </div>
+        </div>
       </div>
+      <div className="tp-buffer" />
     </div>
   );
 };

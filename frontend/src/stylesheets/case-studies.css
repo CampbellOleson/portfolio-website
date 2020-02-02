@@ -5,6 +5,9 @@
   flex-direction: column;
   background-color: #96afb8;
   color: white;
+  -webkit-box-shadow: 0px 32px 35px -37px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 32px 35px -37px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 32px 35px -37px rgba(0, 0, 0, 0.75);
 }
 
 #case-studies-wrapper > div {
@@ -29,7 +32,7 @@
 }
 
 #case-studies-wrapper ul {
-  height: inherit;
+  max-height: 500px;
   display: flex;
   list-style: none;
   overflow: auto;
