@@ -21,7 +21,7 @@ const About = () => {
           <div className="hor-center">
             <div className="am-block">
               <article>
-                I began my career at the University of Utah. I was an
+                I began my journey at the University of Utah. I was an
                 enthusiastic student, and I was part of the honors-level
                 Business Scholars program, but I was ultimately unsatisfied with
                 the pace of business school. While studying, I got an internship

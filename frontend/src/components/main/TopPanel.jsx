@@ -7,13 +7,13 @@ const TopPanel = () => {
   return (
     <div className="tp">
       <div id="tp-wrapper">
-        <div className="vert-center">
+        {/* <div className="vert-center"> */}
           <div className="tp-content">
             <img id="profile-photo" src={ProfilePhoto} alt="" />
             <section className="tp-text">
               <header className="tpt">Hello World!</header>
               <main className="tpt">
-                I heard you're looking for a web developer.
+                Looking for a web developer?
               </main>
               <p className="tpt">
                 If you're into responsive interfaces, modern design, and clean,
@@ -21,7 +21,7 @@ const TopPanel = () => {
               </p>
             </section>
           </div>
-        </div>
+        {/* </div> */}
         <button
           id="scroll-arrow"
           className="is-absolute"

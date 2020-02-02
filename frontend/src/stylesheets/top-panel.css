@@ -42,6 +42,8 @@
   display: flex;
   justify-content: center;
   text-shadow: 1px 1px 20px grey;
+  margin-top: 13vw;
+  width: 100%;
 }
 
 .tp-text {
@@ -70,7 +72,6 @@
   position: relative;
   width: inherit;
   height: 100vh;
-  /* background-color: #add8e6; */
   background-color: transparent;
   display: flex;
   overflow: hidden;
@@ -169,7 +170,7 @@
   }
 
   .tp-text {
-    width: 340px;
+    width: 400px;
     padding-left: 10px;
   }
 
@@ -196,7 +197,7 @@
   }
 
   .tp-text {
-    width: 300px;
+    width: 320px;
     padding-left: 0;
     padding-right: 25px;
   }

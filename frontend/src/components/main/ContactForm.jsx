@@ -89,59 +89,61 @@ class Contact extends React.Component {
     return (
       <div id="cf-wrapper">
         <div className="cf-bg" />
-        <div className="form-wrapper">
-          <header className="cf-header hor-center">Get In Touch</header>
-          {this.nameError()}
-          <form>
-            <input
-              className="field"
-              value={this.state.name}
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Full name"
-              onChange={e => this.setState({ name: e.target.value })}
-            />
-            <input
-              className="field"
-              value={this.state.company}
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Company"
-              onChange={e => this.setState({ company: e.target.value })}
-            />
-            {this.contactError()}
-            <input
-              value={this.state.email}
-              className="field"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              onChange={e => this.setState({ email: e.target.value })}
-            />
-            <input
-              className="field"
-              value={this.state.phone}
-              type="phone"
-              id="phone"
-              name="phone"
-              placeholder="Your phone number"
-              onChange={e => this.setState({ phone: e.target.value })}
-            />
-            <textarea
-              value={this.state.message}
-              className="field"
-              id="message"
-              name="message"
-              placeholder="Write something.."
-              onChange={e => this.setState({ message: e.target.value })}
-            ></textarea>
-            <div className="cf-bottom-block hor-center">
-              {this.submitButton()}
-            </div>
-          </form>
+        <div className="bg-cover">
+          <div className="form-wrapper">
+            <header className="cf-header hor-center">Get In Touch</header>
+            {this.nameError()}
+            <form>
+              <input
+                className="field"
+                value={this.state.name}
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full name"
+                onChange={e => this.setState({ name: e.target.value })}
+              />
+              <input
+                className="field"
+                value={this.state.company}
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Company"
+                onChange={e => this.setState({ company: e.target.value })}
+              />
+              {this.contactError()}
+              <input
+                value={this.state.email}
+                className="field"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                onChange={e => this.setState({ email: e.target.value })}
+              />
+              <input
+                className="field"
+                value={this.state.phone}
+                type="phone"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number"
+                onChange={e => this.setState({ phone: e.target.value })}
+              />
+              <textarea
+                value={this.state.message}
+                className="field"
+                id="message"
+                name="message"
+                placeholder="Write something.."
+                onChange={e => this.setState({ message: e.target.value })}
+              ></textarea>
+              <div className="cf-bottom-block hor-center">
+                {this.submitButton()}
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

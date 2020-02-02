@@ -13,7 +13,7 @@
 
 .anchor-button:hover {
   cursor: pointer;
-  filter: brightness(85%);
+  text-decoration: underline;
 }
 
 .anchor-button:focus {
@@ -35,6 +35,10 @@
   color: white;
 }
 
+.floating-name:hover {
+  text-decoration: underline;
+}
+
 .floating-initials {
   position: fixed;
   z-index: 3;
@@ -43,6 +47,10 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
+}
+
+.floating-initials:hover {
+  text-decoration: underline;
 }
 
 .nav-button {
@@ -57,7 +65,7 @@
   right: 40px;
   width: 30px;
   height: 30px;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .nav-button:hover {
@@ -73,7 +81,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 3;
-  background-color: #D97719;
+  background-color: #d97719;
   transition: all 0.6s ease-in-out;
   position: fixed;
   display: flex;
@@ -84,6 +92,11 @@
 .nav-link a {
   text-decoration: none;
   color: white;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #nav-modal ul {
