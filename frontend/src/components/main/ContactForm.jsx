@@ -7,7 +7,7 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.API_PATH = "http://localhost:3000/send";
+    this.API_PATH = "https://campbelloleson.herokuapp.com/send";
     this.state = {
       name: "",
       company: "",

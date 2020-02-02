@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const exhbs = require("express-handlebars");
+// const exhbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
 const server = express();
 
@@ -11,8 +11,8 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-server.engine("handlebars", exhbs());
-server.set("view engine", "handlebars");
+// server.engine("handlebars", exhbs());
+// server.set("view engine", "handlebars");
 
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
