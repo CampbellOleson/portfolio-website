@@ -5,6 +5,6 @@ module.exports = {
   port: 465,
   URL:
     process.env.NODE_ENV === "production"
-      ? "https:/campbelloleson.dev/send"
+      ? "https://campbelloleson.dev/send"
       : "http://localhost:3000/send"
 };
