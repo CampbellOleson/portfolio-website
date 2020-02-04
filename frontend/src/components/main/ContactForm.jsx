@@ -24,7 +24,6 @@ class Contact extends React.Component {
   }
 
   handleFormSubmit(event) {
-
     event.preventDefault();
     const validation = validateFormInput(this.state);
     if (validation.isValid) {
