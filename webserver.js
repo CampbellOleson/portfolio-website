@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const exhbs = require("express-handlebars");
+const exhbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
+const MAIL = require("./frontend/src/config/mail.js");
 const server = express();
 
 if (process.env.NODE_ENV === "production") {
@@ -11,8 +12,8 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// server.engine("handlebars", exhbs());
-// server.set("view engine", "handlebars");
+server.engine("handlebars", exhbs());
+server.set("view engine", "handlebars");
 
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
@@ -33,35 +34,39 @@ server.post("/send", (req, res) => {
   `;
 
   let transporter = nodemailer.createTransport({
-    host: "campbelloleson.dev",
-    port: 465,
+    host: MAIL.host,
+    port: MAIL.port,
     secure: true,
     auth: {
-      user: "notifications@campbelloleson.dev",
-      pass: "_EahxVk(i%P*"
+      user: MAIL.user,
+      pass: MAIL.pass
     },
     tls: {
       rejectUnauthorized: false
-    }
+    },
+    debug: true,
+    logger: true
   });
+
+  console.log("sending ...");
 
   transporter
     .sendMail({
-      from: "Portfolio Website <notifications@campbelloleson.dev>",
+      from: `Portfolio Visitor <${MAIL.user}>`,
       to: "campbellsoleson@gmail.com",
-      subject: "Portfolio Visitor",
+      subject: "Somebody's Interested in You",
       text: req.body.message,
       html: emailHTML
     })
     .then(() => {
       console.log("Email sent ;)");
       info["mailSent"] = true;
-      info["error"] = "";
+      info["error"] = null;
       res.send({ info });
     })
     .catch(e => {
+      console.log(e);
       info["mailSent"] = false;
-      info["error"] = e;
       res.send({ info });
     });
 });

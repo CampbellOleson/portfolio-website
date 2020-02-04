@@ -1,13 +1,14 @@
 import React from "react";
 import axios from "axios";
 import validateFormInput from "../../utils/validations";
+import MAIL from "../../config/mail.js";
 import "../../stylesheets/contact.css";
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.API_PATH = "https://campbelloleson.dev/send";
+    this.API_PATH = MAIL.URL;
     this.state = {
       name: "",
       company: "",
@@ -16,12 +17,14 @@ class Contact extends React.Component {
       message: "",
       mailSent: false,
       sending: false,
+      serverError: null,
       nameError: null,
       contactError: null
     };
   }
 
   handleFormSubmit(event) {
+
     event.preventDefault();
     const validation = validateFormInput(this.state);
     if (validation.isValid) {
@@ -31,21 +34,19 @@ class Contact extends React.Component {
         url: `${this.API_PATH}`,
         headers: { "content-type": "application/json" },
         data: this.state
-      })
-        .then(res => {
-          this.setState({
-            name: "",
-            company: "",
-            email: "",
-            phone: "",
-            message: "",
-            nameError: null,
-            contactError: null,
-            sending: false,
-            mailSent: res.data.info.mailSent
-          });
-        })
-        .catch(e => this.setState({ error: e.message }));
+      }).then(res => {
+        this.setState({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          message: "",
+          nameError: null,
+          contactError: null,
+          sending: false,
+          mailSent: res.data.mailSent
+        });
+      });
     } else {
       this.setState({
         nameError: validation.name,
@@ -54,7 +55,7 @@ class Contact extends React.Component {
     }
   }
 
-  submitButton() {
+  bottomBlock() {
     return this.state.sending ? (
       <div className="lds-ring">
         <div></div>
@@ -140,7 +141,7 @@ class Contact extends React.Component {
                 onChange={e => this.setState({ message: e.target.value })}
               ></textarea>
               <div className="cf-bottom-block hor-center">
-                {this.submitButton()}
+                {this.bottomBlock()}
               </div>
             </form>
           </div>
