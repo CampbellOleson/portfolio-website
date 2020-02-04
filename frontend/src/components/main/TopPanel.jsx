@@ -7,7 +7,6 @@ const TopPanel = () => {
   return (
     <div className="tp">
       <div id="tp-wrapper">
-        {/* <div className="vert-center"> */}
           <div className="tp-content">
             <img id="profile-photo" src={ProfilePhoto} alt="" />
             <section className="tp-text">
@@ -21,7 +20,6 @@ const TopPanel = () => {
               </p>
             </section>
           </div>
-        {/* </div> */}
         <button
           id="scroll-arrow"
           className="is-absolute"
