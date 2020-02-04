@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const exhbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
 const MAIL = require("./frontend/src/config/mail.js");
 const server = express();
@@ -11,9 +10,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
   });
 }
-
-server.engine("handlebars", exhbs());
-server.set("view engine", "handlebars");
 
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
@@ -43,12 +39,8 @@ server.post("/send", (req, res) => {
     },
     tls: {
       rejectUnauthorized: false
-    },
-    debug: true,
-    logger: true
+    }
   });
-
-  console.log("sending ...");
 
   transporter
     .sendMail({
@@ -59,7 +51,6 @@ server.post("/send", (req, res) => {
       html: emailHTML
     })
     .then(() => {
-      console.log("Email sent ;)");
       info["mailSent"] = true;
       info["error"] = null;
       res.send({ info });
