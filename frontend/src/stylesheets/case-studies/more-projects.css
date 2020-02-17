@@ -1,6 +1,7 @@
 .mp-wrapper {
-  width: 100vw;
-  height: 52vh;
+  width: 90vw;
+  height: 420px;
+  padding: 0 5vw 0 5vw;
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
@@ -22,21 +23,24 @@
 
 .mp-wrapper > section > ul {
   display: flex;
-  justify-content: space-evenly;
+  overflow: hidden;
+  justify-content: space-between;
   list-style: none;
+  min-height: 340px;
 }
 
 .mp-item {
   width: 400px;
+  min-width: 400px;
   height: 250px;
   background-color: grey;
   margin: 10px;
   border-radius: 4px;
   position: relative;
   transition: all 0.25s ease-in-out;
-  -webkit-box-shadow: 2px 14px 72px -39px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 14px 72px -39px rgba(0, 0, 0, 1);
-  box-shadow: 2px 14px 72px -39px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 26px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 26px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 26px -20px rgba(0, 0, 0, 0.75);
 }
 
 .mp-item:hover {
@@ -79,4 +83,112 @@
 
 .mp-info > div > p {
   font-size: 15px;
+}
+
+@media all and (min-width: 1230px) and (max-width: 1400px) {
+  .mp-item {
+    width: 350px;
+    min-width: 350px;
+  }
+}
+
+@media all and (min-width: 1130px) and (max-width: 1230px) {
+  .mp-item {
+    width: 320px;
+    min-width: 320px;
+  }
+}
+
+@media all and (min-width: 0) and (max-width: 1130px) {
+  .mp-item {
+    margin: 5px;
+  }
+}
+
+@media all and (min-width: 960px) and (max-width: 1130px) {
+  .mp-item {
+    width: 290px;
+    min-width: 290px;
+    height: 200px;
+  }
+
+  .mp-info > div > header {
+    font-size: 22px;
+    margin: 3px 0 3px 0;
+  }
+
+  .mp-info > div {
+    padding: 3px;
+  }
+
+  .mp-info > div > p {
+    font-size: 13px;
+  }
+
+  .mp-wrapper {
+    height: 350px;
+    width: 96vw;
+    padding: 0 2vw 0 2vw;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 960px) {
+  .mp-info > div > p {
+    display: none;
+  }
+
+  .mp-wrapper {
+    width: 96vw;
+    padding: 0 2vw 0 2vw;
+  }
+}
+
+@media all and (min-width: 850px) and (max-width: 960px) {
+  .mp-item {
+    width: 250px;
+    min-width: 250px;
+    height: 200px;
+  }
+
+  .mp-wrapper {
+    height: 350px;
+  }
+}
+
+@media all and (min-width: 770px) and (max-width: 850px) {
+  .mp-item {
+    width: 230px;
+    min-width: 230px;
+    height: 180px;
+  }
+
+  .mp-wrapper {
+    height: 320px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 770px) {
+  .mp-item {
+    width: 200px;
+    min-width: 200px;
+    height: 150px;
+  }
+
+  .mp-info > div > header {
+    font-size: 20px;
+  }
+
+  .mp-wrapper {
+    height: 280px;
+  }
+
+  .mp-wrapper > div > header {
+    font-size: 25px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 680px) {
+  .mp-wrapper > section > ul {
+    overflow: scroll;
+  }
 }

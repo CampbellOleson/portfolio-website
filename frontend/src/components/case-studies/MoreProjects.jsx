@@ -53,7 +53,11 @@ const MoreProjects = props => {
       <section>
         <ul>
           {keys.map(key => {
-            return <li className="mp-item">{pLinks[key]}</li>;
+            return (
+              <li className="mp-item" key={key}>
+                {pLinks[key]}
+              </li>
+            );
           })}
         </ul>
       </section>
